@@ -216,11 +216,18 @@ body {
 LAYOUT 
 ***/
 
+#c_main-content{
+	background-color: #f7f6f5
+}
+
 #content {
 	padding: 0 !important;
-	background-color: #f7f6f5;
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 144rem;
 }
-#content,
+
 #global {
 	max-width: none;
 	margin: 0;
@@ -230,6 +237,30 @@ LAYOUT
 	width: 100%;
 	padding: 0;
 }
+
+@media only screen and (min-width: 60.625em) {
+	.c_c-panel--pad--large.cr {
+		padding-top: 15px;
+	}
+
+	#global {
+		margin-bottom: 15px;
+	}
+	#side,
+	#main {
+		margin-top: 6rem;
+	}
+
+	#main {
+		width: 67%;
+	}
+
+	#side {
+		width: 25%;
+		margin-right: 8%;
+	}
+}
+
 /***
 TYPOGRAPHY 
 ***/
