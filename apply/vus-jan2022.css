@@ -274,6 +274,17 @@ h1 {
 	-moz-osx-font-smoothing: grayscale;
 	margin-bottom: 2.4rem;
 }
+
+a.selected {
+	font-weight: bold;
+
+}
+
+div#menu ul li a.selected {
+	color: #2b669f;
+}
+
+
 /***
 FORM STYLES 
 ***/
@@ -287,8 +298,13 @@ table.plain tr.column>th {
 	background-color: #FFF;
 }
 table.plain>*>tr>th:first-of-type {
-	padding: 4px 5px 4px 40px;
+	padding: 4px 40px 4px 40px;
 }
+
+table.plain>*>tr:last-of-type>th, table.plain>*>tr:last-of-type>td {
+    padding-bottom: 40px;
+}
+
 table.plain tr.header>th {
 	font-size: 4rem;
 	line-height: 1;
@@ -300,6 +316,16 @@ table.plain tr.header>th {
 	font-weight: 400 !important;
 	padding-top: 40px;
 }
+
+
+table.plain>*>tr:last-of-type>th,
+table.plain>*>tr:last-of-type>td,
+table.plain>*>tr.address-row:nth-last-child(2)>td,
+table.plain>*>tr.address-row:nth-last-child(2)>th  {
+    padding-bottom: 40px;
+ }
+
+
 #main select,
 #main input,
 #main textarea {
@@ -308,6 +334,7 @@ table.plain tr.header>th {
 table.plain label {
 	font-size: 1.75rem;
 }
+
 /***
 SIDE NAVIGATION 
 ***/
@@ -352,6 +379,7 @@ BUTTONS
 }
 #content td a:not(.address_delete_link) {
 	float: right;
+	margin-right: 35px;
 	background: #e9f0f7;
 	color: #2b669f;
 	border: 1px solid transparent;
