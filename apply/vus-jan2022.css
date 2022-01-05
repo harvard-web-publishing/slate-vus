@@ -216,11 +216,18 @@ body {
 LAYOUT 
 ***/
 
+#c_main-content{
+	background-color: #f7f6f5
+}
+
 #content {
 	padding: 0 !important;
-	background-color: #f7f6f5;
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 144rem;
 }
-#content,
+
 #global {
 	max-width: none;
 	margin: 0;
@@ -230,6 +237,30 @@ LAYOUT
 	width: 100%;
 	padding: 0;
 }
+
+@media only screen and (min-width: 60.625em) {
+	.c_c-panel--pad--large.cr {
+		padding-top: 15px;
+	}
+
+	#global {
+		margin-bottom: 15px;
+	}
+	#side,
+	#main {
+		margin-top: 6rem;
+	}
+
+	#main {
+		width: 67%;
+	}
+
+	#side {
+		width: 25%;
+		margin-right: 8%;
+	}
+}
+
 /***
 TYPOGRAPHY 
 ***/
@@ -243,6 +274,17 @@ h1 {
 	-moz-osx-font-smoothing: grayscale;
 	margin-bottom: 2.4rem;
 }
+
+a.selected {
+	font-weight: bold;
+
+}
+
+div#menu ul li a.selected {
+	color: #2b669f;
+}
+
+
 /***
 FORM STYLES 
 ***/
@@ -256,8 +298,13 @@ table.plain tr.column>th {
 	background-color: #FFF;
 }
 table.plain>*>tr>th:first-of-type {
-	padding: 4px 5px 4px 40px;
+	padding: 4px 40px 4px 40px;
 }
+
+table.plain>*>tr:last-of-type>th, table.plain>*>tr:last-of-type>td {
+    padding-bottom: 40px;
+}
+
 table.plain tr.header>th {
 	font-size: 4rem;
 	line-height: 1;
@@ -269,6 +316,16 @@ table.plain tr.header>th {
 	font-weight: 400 !important;
 	padding-top: 40px;
 }
+
+
+table.plain>*>tr:last-of-type>th,
+table.plain>*>tr:last-of-type>td,
+table.plain>*>tr.address-row:nth-last-child(2)>td,
+table.plain>*>tr.address-row:nth-last-child(2)>th  {
+    padding-bottom: 40px;
+ }
+
+
 #main select,
 #main input,
 #main textarea {
@@ -277,6 +334,7 @@ table.plain tr.header>th {
 table.plain label {
 	font-size: 1.75rem;
 }
+
 /***
 SIDE NAVIGATION 
 ***/
@@ -321,6 +379,7 @@ BUTTONS
 }
 #content td a:not(.address_delete_link) {
 	float: right;
+	margin-right: 35px;
 	background: #e9f0f7;
 	color: #2b669f;
 	border: 1px solid transparent;
