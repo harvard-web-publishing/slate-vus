@@ -216,6 +216,11 @@ body {
 LAYOUT 
 ***/
 
+/* remove when done */
+
+#content-wrapper div[role=banner] {
+	display: none;
+}
 #c_main-content {
 	background-color: #f7f6f5
 }
@@ -224,7 +229,7 @@ LAYOUT
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 144rem;
+	max-width: 100%;
 }
 #global {
 	max-width: none;
@@ -236,6 +241,15 @@ LAYOUT
 	padding: 0;
 }
 @media only screen and (min-width: 60.625em) {
+	#content-wrapper {
+		display: flex;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1300px;
+		align-items: flex-start;
+		gap: 4em;
+	}
 	.c_c-panel--pad--large.cr {
 		padding-top: 15px;
 	}
@@ -251,7 +265,6 @@ LAYOUT
 	}
 	#side {
 		width: 25%;
-		margin-right: 8%;
 	}
 }
 /***
@@ -280,6 +293,15 @@ VUS TITLE BAND
 
 #app-title {
 	font-size: 6.5rem;
+	background: #FFF;
+	border-bottom: 1px solid #dae0e0;
+	padding: 55px 0;
+}
+#app-title--inner {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1300px;
 }
 /***
 FORM STYLES 
@@ -325,12 +347,17 @@ table.plain>*>tr.address-row:nth-last-child(2)>td,
 table.plain>*>tr.address-row:nth-last-child(2)>th {
 	padding-bottom: 40px;
 }
-#main input,
+#main input[type=text],
 #main textarea {
 	width: 70%;
 }
 table.plain label {
 	font-size: 1.75rem;
+}
+#main ul,
+#main ol {
+	list-style: unset;
+	margin-left: 45px;
 }
 /***
 SIDE NAVIGATION 
