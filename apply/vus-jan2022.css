@@ -231,6 +231,11 @@ LAYOUT
 	margin-right: auto;
 	max-width: 100%;
 }
+@media only screen and (max-width: 760px) {
+	#content {
+		width: 95%;
+	}
+}
 #global {
 	max-width: none;
 	margin: 0;
@@ -307,12 +312,14 @@ VUS TITLE BAND
 FORM STYLES 
 ***/
 
+#part_table,
 #main h1~form,
 .form_page,
 table.plain {
 	background: #FFF;
 	margin-bottom: 25px;
 }
+.form_page~#part_table,
 #main h1~form,
 .form_page {
 	padding: 40px;
@@ -354,10 +361,19 @@ table.plain>*>tr.address-row:nth-last-child(2)>th {
 table.plain label {
 	font-size: 1.75rem;
 }
+table.plain colgroup col[style] {
+	width: 230px !important;
+}
 #main ul,
 #main ol {
 	list-style: unset;
 	margin-left: 45px;
+}
+tr.column>th,
+tr.column>td,
+.column {
+	background-color: #fcfcfc;
+	font-weight: 600 !important;
 }
 /***
 SIDE NAVIGATION 
@@ -402,6 +418,7 @@ BUTTONS
 	background-color: #f6e2e5;
 	text-decoration: none;
 }
+#content table.table>thead>tr>td>a:not(.address_delete_link),
 #content .form_response li a:nth-child(1),
 #content td a:not(.address_delete_link) {
 	float: right;
@@ -418,4 +435,11 @@ BUTTONS
 #content .form_response li a:nth-child(1) {
 	float: none;
 	margin-right: 0;
+}
+table.table>thead>tr>td>a[data-href],
+#content table.table td a.normal {
+	color: #2b669f !important;
+	text-decoration: none !important;
+	float: none;
+	display: inline-block;
 }
